@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<applications xmlns="http://documentation.bonitasoft.com/application-xml-schema/1.0">
+    <application token="private" version="1.0" profile="User" homePage="private" state="ACTIVATED" layout="custompage_layoutBonita" theme="custompage_bootstrapdefaulttheme">
+        <displayName>private</displayName>
+        <applicationPages>
+            <applicationPage customPage="custompage_privatePage" token="private"/>
+        </applicationPages>
+        <applicationMenus>
+            <applicationMenu applicationPage="private">
+                <displayName>privatePage</displayName>
+            </applicationMenu>
+        </applicationMenus>
+    </application>
+</applications>

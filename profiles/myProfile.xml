@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<profiles:profiles xmlns:profiles="http://www.bonitasoft.org/ns/profile/6.1">
+    <profile name="guestProfile" isDefault="false">
+        <description></description>
+        <profileEntries/>
+        <profileMapping>
+            <users>
+                <user>guest</user>
+            </users>
+            <groups/>
+            <memberships/>
+            <roles/>
+        </profileMapping>
+    </profile>
+</profiles:profiles>

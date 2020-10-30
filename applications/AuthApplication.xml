@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<applications xmlns="http://documentation.bonitasoft.com/application-xml-schema/1.0">
+    <application token="publicAuth" version="1.0" profile="guestProfile" homePage="login" state="ACTIVATED" layout="custompage_layoutBonita" theme="custompage_bootstrapdefaulttheme">
+        <displayName>publicAuth</displayName>
+        <applicationPages>
+            <applicationPage customPage="custompage_externalAuth" token="login"/>
+            <applicationPage customPage="custompage_register" token="register"/>
+        </applicationPages>
+        <applicationMenus>
+            <applicationMenu applicationPage="login">
+                <displayName>login</displayName>
+            </applicationMenu>
+            <applicationMenu applicationPage="register">
+                <displayName>register</displayName>
+            </applicationMenu>
+        </applicationMenus>
+    </application>
+    <application token="internalAuth" version="1.0" profile="guestProfile" homePage="login" state="ACTIVATED" layout="custompage_layoutBonita" theme="custompage_bootstrapdefaulttheme">
+        <displayName>internalAuth</displayName>
+        <applicationPages>
+            <applicationPage customPage="custompage_internalAuth" token="login"/>
+        </applicationPages>
+        <applicationMenus>
+            <applicationMenu applicationPage="login">
+                <displayName>login</displayName>
+            </applicationMenu>
+        </applicationMenus>
+    </application>
+</applications>
