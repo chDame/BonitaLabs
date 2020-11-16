@@ -35,3 +35,7 @@ You can write queries with AND, OR operands, wildcards, ranges, etc.
 persistenceId:1 AND active:true AND attribute.name:"Bar" AND attribute.type.name:"Foo" 
 persistenceId:[1 TO 10]  OR  attribute.name:"Bonita*"  
 ```
+
+The code is in **dataSearchRestAPI** and to call it, you also need to pass the entity you're looking for :
+
+../API/extension/search?**entity=MyEntity**&q=attribut.subAttribute:"Bonita*" AND attribut2:3
