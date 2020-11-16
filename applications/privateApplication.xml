@@ -4,10 +4,14 @@
         <displayName>private</displayName>
         <applicationPages>
             <applicationPage customPage="custompage_privatePage" token="private"/>
+            <applicationPage customPage="custompage_tasksList" token="tasks"/>
         </applicationPages>
         <applicationMenus>
             <applicationMenu applicationPage="private">
                 <displayName>privatePage</displayName>
+            </applicationMenu>
+            <applicationMenu applicationPage="tasks">
+                <displayName>taskList</displayName>
             </applicationMenu>
         </applicationMenus>
     </application>

@@ -1,0 +1,56 @@
+{
+  "designerVersion" : "1.10.34",
+  "id" : "customTaskTabs",
+  "name" : "taskTabs",
+  "lastUpdate" : 1605538867442,
+  "template" : "@customTaskTabs.tpl.html",
+  "controller" : "@customTaskTabs.ctrl.js",
+  "custom" : true,
+  "properties" : [
+    {
+      "label" : "task to display",
+      "name" : "task",
+      "type" : "text",
+      "defaultValue" : "Yellow",
+      "choiceValues" : [
+        "Yellow",
+        "LightGray"
+      ],
+      "bond" : "variable"
+    },
+    {
+      "label" : "Base Url to load iframes",
+      "name" : "baseUrl",
+      "type" : "text",
+      "defaultValue" : "http://localhost:8080/bonita",
+      "bond" : "expression"
+    },
+    {
+      "label" : "User Id",
+      "name" : "userId",
+      "type" : "integer",
+      "bond" : "expression"
+    }
+  ],
+  "assets" : [
+    {
+      "id" : "cdc04201-373c-453b-8e5a-caf3b3141b13",
+      "name" : "lazyTasksTabs.css",
+      "type" : "css",
+      "order" : 2,
+      "external" : false
+    },
+    {
+      "id" : "311762ae-afa1-4c6d-8853-5b3cc553027d",
+      "name" : "iframeOnLoad_1.js",
+      "type" : "js",
+      "order" : 1,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [
+    "iframeOnload"
+  ],
+  "type" : "widget",
+  "hasHelp" : false
+}

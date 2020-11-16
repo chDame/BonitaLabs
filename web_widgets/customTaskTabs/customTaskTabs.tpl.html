@@ -1,0 +1,76 @@
+
+<div ng-class="popup?'popupOverlay':''" >
+    <button ng-if="properties.task.id" class="resizeFull pull-right" ng-click="ctrl.detailsPopup()" title="Open in a popup">
+        <i class="glyphicon glyphicon-resize-full"></i>
+        <span class="sr-only" translate=""><span>Open in a popup</span></span>
+    </button>
+    <button ng-if="popup" type="button" class="pull-right close" title="Close" aria-label="Close" ng-click="ctrl.detailsPopup()">
+        <span>×</span>
+    </button>
+    <div class="closePopupLeft" ng-click="ctrl.detailsPopup()"></div>
+    <div class="closePopupRight" ng-click="ctrl.detailsPopup()"></div>
+    <div class="closePopupTop" ng-click="ctrl.detailsPopup()"></div>
+    <div class="closePopupBottom" ng-click="ctrl.detailsPopup()"></div>
+        
+    <div class="tasktabs" vertical="false" type="tabs">
+        <ul class="nav nav-tabs"> 
+            <li ng-class="tab=='task'?'active':''">
+                <a href="" ng-click="ctrl.select('task')"><tab-heading>Formulaire</tab-heading></a>
+            </li> 
+            <li ng-class="tab=='comments'?'active':''">
+                <a href="" ng-click="ctrl.select('comments')"><tab-heading>Fil de discussion</tab-heading></a>
+            </li> 
+            <li ng-class="tab=='overview'?'active':''">
+                <a href="" ng-click="ctrl.select('overview')"><tab-heading>Synthèse</tab-heading></a>
+            </li> 
+        </ul>
+        
+        <div class="tab-content">
+           <div ng-class="tab=='task'?'tab-pane custom active':'custom tab-pane'">
+            <div class="FormOverlay-message ng-scope" ng-if="frameTaskSrc && properties.userId!=properties.task.assigned_id">
+                <div class="FormOverlay-text" translate="">
+                    <span>Pour saisir le formulaire, vous devez vous assigner la tâche. Cela signifie que vous serez la seule personne à pouvoir la réaliser. Pour la rendre de nouveau disponible à l'équipe, il faut la libérer.</span>
+                    <button class="btn btn-primary" ng-click="ctrl.assignMe()" title="Assign to me. Only I will be able to do it">
+                        <i class="glyphicon glyphicon-user"></i>
+                        <translate><span>Prendre</span></translate>
+                    </button>
+                </div>
+           </div>
+              <iframe ng-if="frameTaskSrc" src="{{frameTaskSrc}}" iframe-set-dimensions-onload class="no-border">
+                  
+              </iframe>
+           </div>
+           <div ng-class="tab=='comments'?'custom tab-pane active':'custom tab-pane'">
+               <section class="Comments" ng-if="comments">
+                    <header class="Comments-header"><span>Discussion</span></header>
+                
+                    <div class="Comments-content">
+                        <div class="Comment ng-scope" ng-repeat="comment in comments">
+                            <img class="Comment-icon" alt="Author" onerror="this.style.display='none'" src="../theme/icons/default/icon_user.png">
+                            <div class="Comment-header">
+                                {{comment.userId.firstname}} {{comment.userId.lastname}} <span class="text-muted">le {{comment.postDate | date:'dd/MM/yyyy à h:mm'}}</span>
+                            </div>
+                            <div class="Comment-content">{{comment.content}}</div>
+                        </div>
+                    </div>
+                
+                    <footer class="Comments-footer">
+                        <form name="CaseCommentsForm" class="CommentForm" ng-submit="addComment(newComment)">
+                            <div class="form-group" ng-class="{'has-error': CaseCommentsForm.$error.maxlength }">
+                                <textarea id="comment" class="form-control" placeholder="New comment" ng-model="newComment" ng-maxlength="255" required="required"></textarea>
+                                <span class="help-block CommentForm-help" translate=""><span>Maximum size 255 characters</span></span>
+                            </div>
+                            <button type="submit" class="btn btn-default" ng-disabled="CaseCommentsForm.$invalid" translate="" disabled="disabled">Add</button>
+                        </form>
+                    </footer>
+                
+                </section>
+           </div>
+           <div ng-class="tab=='overview'?'custom tab-pane active':'custom tab-pane'">
+              <iframe ng-if="frameOverviewSrc" src="{{frameOverviewSrc}}" iframe-set-dimensions-onload class="no-border">
+              </iframe>
+           </div>
+       </div>
+    </div>
+</div>
+ 

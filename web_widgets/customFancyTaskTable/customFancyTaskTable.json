@@ -1,0 +1,80 @@
+{
+  "designerVersion" : "1.10.34",
+  "id" : "customFancyTaskTable",
+  "name" : "fancyTaskTable",
+  "lastUpdate" : 1605538867194,
+  "template" : "@customFancyTaskTable.tpl.html",
+  "controller" : "@customFancyTaskTable.ctrl.js",
+  "custom" : true,
+  "properties" : [
+    {
+      "label" : "Headers",
+      "name" : "headers",
+      "type" : "collection",
+      "defaultValue" : [
+        "Id",
+        "Name",
+        "Description",
+        "Date"
+      ],
+      "bond" : "expression"
+    },
+    {
+      "label" : "Available values",
+      "name" : "availableValues",
+      "type" : "collection",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Columns key",
+      "name" : "columnsKey",
+      "type" : "collection",
+      "bond" : "expression"
+    },
+    {
+      "label" : "Selected Row",
+      "name" : "selectedRow",
+      "type" : "text",
+      "bond" : "variable"
+    },
+    {
+      "label" : "UserId",
+      "name" : "userId",
+      "type" : "integer",
+      "bond" : "expression"
+    }
+  ],
+  "assets" : [
+    {
+      "id" : "dd61da57-94ef-4963-99ea-d5b0f5051116",
+      "name" : "https://cdn.datatables.net/1.10.7/css/jquery.dataTables.css",
+      "type" : "css",
+      "order" : 3,
+      "external" : true
+    },
+    {
+      "id" : "84aeab1e-5f38-47b2-96c7-ba9fcac38e91",
+      "name" : "https://code.jquery.com/jquery-2.1.4.min.js",
+      "type" : "js",
+      "order" : 1,
+      "external" : true
+    },
+    {
+      "id" : "968f44b6-e720-46da-b895-9f7d61ecb540",
+      "name" : "jquery.dataTables.min.js",
+      "type" : "js",
+      "order" : 2,
+      "external" : false
+    },
+    {
+      "id" : "e6327340-3977-4285-908d-4b8b3c062693",
+      "name" : "fancyTasksTable.css",
+      "type" : "css",
+      "order" : 5,
+      "external" : false
+    }
+  ],
+  "requiredModules" : [ ],
+  "type" : "widget",
+  "hasHelp" : false
+}

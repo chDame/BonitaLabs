@@ -1,0 +1,35 @@
+
+<div class="table-responsive">
+    <table class="table table-striped fancyTable" ng-class="{'table-hover': ctrl.isClickable()}">
+        <thead>
+            <tr>
+                <th class="no-sort"><i class="glyphicon glyphicon-user"></i></th>
+                <th ng-repeat="header in properties.headers">
+                    {{ header | translate }}
+                </th>
+                <th class="no-sort"></th>
+            </tr>
+        </thead>
+        <tbody ng-if="ctrl.isArray(properties.availableValues) && ctrl.isArray(properties.columnsKey)">
+            <tr ng-repeat="row in properties.availableValues track by $index" ng-click="ctrl.selectRow(row)" ng-class="row.id==properties.selectedRow.id?'info':''">
+                
+                <td class="TaskTable-icon">
+                    <i class="glyphicon glyphicon-user" ng-if="properties.userId===row.assigned_id"></i>
+                </td>
+                <td ng-repeat="column in properties.columnsKey" ng-click="ctrl.selectRow(row)">
+                    
+                    <span>{{ $eval(column, row) }}</span>
+                 </td>
+                 <td>
+                     <a ng-if="!row.assigned_id" class="btn btn-primary" ng-click="assignMe(row)">Prendre</a>
+                     <a ng-if="row.assigned_id" class="btn btn-warning" ng-click="unassign(row)">Libérer</a>
+                 </td>
+            </tr>
+        </tbody>
+        <tbody ng-if="ctrl.isArray(properties.availableValues) && !ctrl.isArray(properties.columnsKey)">
+            <tr ng-repeat="row in properties.availableValues" ng-click="ctrl.selectRow(row)">
+                <td> {{ row }} </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

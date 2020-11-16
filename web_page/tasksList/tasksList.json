@@ -1,0 +1,524 @@
+{
+  "designerVersion" : "1.11.46",
+  "previousDesignerVersion" : "1.10.34",
+  "id" : "tasksList",
+  "name" : "tasksList",
+  "lastUpdate" : 1605538909923,
+  "rows" : [
+    [
+      {
+        "type" : "container",
+        "dimension" : {
+          "xs" : 12,
+          "sm" : 12,
+          "md" : 12,
+          "lg" : 12
+        },
+        "propertyValues" : {
+          "cssClasses" : {
+            "type" : "constant",
+            "value" : "pt-1"
+          },
+          "hidden" : {
+            "type" : "constant",
+            "value" : false
+          },
+          "repeatedCollection" : {
+            "type" : "variable",
+            "value" : ""
+          }
+        },
+        "reference" : "30f8bb36-441f-4982-9dad-6c7ca22a0a4a",
+        "hasValidationError" : false,
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "tabsContainer",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 6,
+                "lg" : 6
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "vertical" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "type" : {
+                  "type" : "constant",
+                  "value" : "tabs"
+                }
+              },
+              "reference" : "fb4860bb-e666-41da-8527-f0d769d87c11",
+              "hasValidationError" : false,
+              "id" : "pbTabsContainer",
+              "tabList" : [
+                {
+                  "type" : "tabContainer",
+                  "dimension" : {
+                    "xs" : 12,
+                    "sm" : 12,
+                    "md" : 12,
+                    "lg" : 12
+                  },
+                  "propertyValues" : {
+                    "cssClasses" : {
+                      "type" : "constant",
+                      "value" : ""
+                    },
+                    "hidden" : {
+                      "type" : "constant",
+                      "value" : false
+                    },
+                    "disabled" : {
+                      "type" : "constant",
+                      "value" : false
+                    },
+                    "title" : {
+                      "type" : "interpolation",
+                      "value" : "Mes tâches"
+                    }
+                  },
+                  "reference" : "83995006-00f4-4c36-a170-ad01badb313b",
+                  "hasValidationError" : false,
+                  "id" : "pbTabContainer",
+                  "container" : {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 12
+                    },
+                    "propertyValues" : { },
+                    "reference" : "345f9a92-5fde-4a70-a485-251005636686",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [
+                        {
+                          "type" : "container",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 12,
+                            "lg" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : "panel panel-default"
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "repeatedCollection" : {
+                              "type" : "variable",
+                              "value" : ""
+                            }
+                          },
+                          "reference" : "c75f97b0-0a8b-4741-b2aa-6a359906a745",
+                          "hasValidationError" : false,
+                          "id" : "pbContainer",
+                          "rows" : [
+                            [
+                              {
+                                "type" : "component",
+                                "dimension" : {
+                                  "xs" : 12,
+                                  "sm" : 12,
+                                  "md" : 12,
+                                  "lg" : 12
+                                },
+                                "propertyValues" : {
+                                  "cssClasses" : {
+                                    "type" : "constant",
+                                    "value" : ""
+                                  },
+                                  "hidden" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "title" : {
+                                    "type" : "constant",
+                                    "value" : "Liste des tâches"
+                                  },
+                                  "refreshVar" : {
+                                    "type" : "variable",
+                                    "value" : "taskLists"
+                                  },
+                                  "urlToFetch" : {
+                                    "type" : "expression",
+                                    "value" : "taskListUrl"
+                                  }
+                                },
+                                "reference" : "a646d07c-65ea-4470-b7ba-8a872fd489b2",
+                                "hasValidationError" : false,
+                                "id" : "customPanelTitle"
+                              }
+                            ],
+                            [
+                              {
+                                "type" : "component",
+                                "dimension" : {
+                                  "xs" : 12,
+                                  "sm" : 12,
+                                  "md" : 12,
+                                  "lg" : 12
+                                },
+                                "propertyValues" : {
+                                  "cssClasses" : {
+                                    "type" : "constant",
+                                    "value" : "panel-body"
+                                  },
+                                  "hidden" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "headers" : {
+                                    "type" : "constant",
+                                    "value" : [
+                                      "Tâche",
+                                      "Nom du processus",
+                                      "Priorité"
+                                    ]
+                                  },
+                                  "availableValues" : {
+                                    "type" : "expression",
+                                    "value" : "myTasksLists"
+                                  },
+                                  "columnsKey" : {
+                                    "type" : "constant",
+                                    "value" : [
+                                      "displayName",
+                                      "processName",
+                                      "priority"
+                                    ]
+                                  },
+                                  "selectedRow" : {
+                                    "type" : "variable",
+                                    "value" : "selectedTask"
+                                  },
+                                  "userId" : {
+                                    "type" : "expression",
+                                    "value" : "user.user_id"
+                                  }
+                                },
+                                "reference" : "ea2aa7aa-5bdf-4f65-bc04-49571d03a36a",
+                                "hasValidationError" : false,
+                                "id" : "customFancyTaskTable"
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "type" : "tabContainer",
+                  "dimension" : {
+                    "xs" : 12,
+                    "sm" : 12,
+                    "md" : 12,
+                    "lg" : 12
+                  },
+                  "propertyValues" : {
+                    "cssClasses" : {
+                      "type" : "constant",
+                      "value" : ""
+                    },
+                    "hidden" : {
+                      "type" : "constant",
+                      "value" : false
+                    },
+                    "disabled" : {
+                      "type" : "constant",
+                      "value" : false
+                    },
+                    "title" : {
+                      "type" : "interpolation",
+                      "value" : "Tâches disponibles"
+                    }
+                  },
+                  "reference" : "f2af6b2e-7d25-4e95-aaae-16d13f779d1f",
+                  "hasValidationError" : false,
+                  "id" : "pbTabContainer",
+                  "container" : {
+                    "type" : "container",
+                    "dimension" : {
+                      "xs" : 12
+                    },
+                    "propertyValues" : { },
+                    "reference" : "19009921-3c24-411f-ba8c-4b75cf4c0fa9",
+                    "hasValidationError" : false,
+                    "id" : "pbContainer",
+                    "rows" : [
+                      [
+                        {
+                          "type" : "container",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 12,
+                            "lg" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : "panel panel-default"
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "repeatedCollection" : {
+                              "type" : "variable",
+                              "value" : ""
+                            }
+                          },
+                          "reference" : "364ca652-96a8-4aa8-a0c0-a3acf03f235a",
+                          "hasValidationError" : false,
+                          "id" : "pbContainer",
+                          "rows" : [
+                            [
+                              {
+                                "type" : "component",
+                                "dimension" : {
+                                  "xs" : 12,
+                                  "sm" : 12,
+                                  "md" : 12,
+                                  "lg" : 12
+                                },
+                                "propertyValues" : {
+                                  "cssClasses" : {
+                                    "type" : "constant",
+                                    "value" : ""
+                                  },
+                                  "hidden" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "title" : {
+                                    "type" : "constant",
+                                    "value" : "Liste des tâches"
+                                  },
+                                  "refreshVar" : {
+                                    "type" : "variable",
+                                    "value" : "taskLists"
+                                  },
+                                  "urlToFetch" : {
+                                    "type" : "expression",
+                                    "value" : "taskListUrl"
+                                  }
+                                },
+                                "reference" : "f642edce-1ec1-4d17-a4fe-e5326b236e21",
+                                "hasValidationError" : false,
+                                "id" : "customPanelTitle"
+                              }
+                            ],
+                            [
+                              {
+                                "type" : "component",
+                                "dimension" : {
+                                  "xs" : 12,
+                                  "sm" : 12,
+                                  "md" : 12,
+                                  "lg" : 12
+                                },
+                                "propertyValues" : {
+                                  "cssClasses" : {
+                                    "type" : "constant",
+                                    "value" : "panel-body"
+                                  },
+                                  "hidden" : {
+                                    "type" : "constant",
+                                    "value" : false
+                                  },
+                                  "headers" : {
+                                    "type" : "constant",
+                                    "value" : [
+                                      "Référence",
+                                      "Tâche",
+                                      "Nom du processus",
+                                      "Priorité"
+                                    ]
+                                  },
+                                  "availableValues" : {
+                                    "type" : "expression",
+                                    "value" : "taskLists"
+                                  },
+                                  "columnsKey" : {
+                                    "type" : "constant",
+                                    "value" : [
+                                      "ref",
+                                      "displayName",
+                                      "processName",
+                                      "priority"
+                                    ]
+                                  },
+                                  "selectedRow" : {
+                                    "type" : "variable",
+                                    "value" : "selectedTask"
+                                  },
+                                  "userId" : {
+                                    "type" : "expression",
+                                    "value" : "user.user_id"
+                                  }
+                                },
+                                "reference" : "8c53c59c-2f5b-439d-b7a3-b591c42cc8c0",
+                                "hasValidationError" : false,
+                                "id" : "customFancyTaskTable"
+                              }
+                            ]
+                          ]
+                        }
+                      ]
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 6,
+                "lg" : 6
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "task" : {
+                  "type" : "variable",
+                  "value" : "selectedTask"
+                },
+                "baseUrl" : {
+                  "type" : "expression",
+                  "value" : "baseUrl"
+                },
+                "userId" : {
+                  "type" : "expression",
+                  "value" : "user.user_id"
+                }
+              },
+              "reference" : "07ccbb32-1f0c-4d82-ad43-81854222a1be",
+              "hasValidationError" : false,
+              "id" : "customTaskTabs"
+            }
+          ]
+        ]
+      }
+    ]
+  ],
+  "assets" : [
+    {
+      "id" : "e28d5aef-78b8-44c2-a332-d546404a147e",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "b6330d57-ab95-4b15-87bd-15d51ee5a0b7",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "variables" : {
+    "taskLists" : {
+      "type" : "url",
+      "value" : [
+        "../API/extension/taskList?c=500&p=0&userId={{user.user_id}}"
+      ],
+      "exposed" : false
+    },
+    "user" : {
+      "type" : "url",
+      "value" : [
+        "../API/system/session/1"
+      ],
+      "exposed" : false
+    },
+    "selectedTask" : {
+      "type" : "json",
+      "value" : [
+        "{}"
+      ],
+      "exposed" : false
+    },
+    "taskUrl" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.selectedTask.id && $data.user.user_id) {",
+        "    return $data.baseUrl+\"/portal/form/taskInstance/\"+$data.selectedTask.id;",
+        "}",
+        "return null;"
+      ],
+      "exposed" : false
+    },
+    "baseUrl" : {
+      "type" : "expression",
+      "value" : [
+        "var baseurl = window.location.href;",
+        "let idx = baseurl.indexOf(\"/apps\");",
+        "if (idx>0) {",
+        "    return baseurl.substring(0, idx);",
+        "}",
+        "return window.location.origin + '/bonita'"
+      ],
+      "exposed" : false
+    },
+    "setFirstTask" : {
+      "type" : "expression",
+      "value" : [
+        "if (!$data.selectedTask.id && $data.taskLists) {",
+        "    $data.selectedTask = $data.taskLists[0];",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "myTasksLists" : {
+      "type" : "expression",
+      "value" : [
+        "if($data.taskLists && $data.user) {",
+        "    return $data.taskLists.filter(function(task){",
+        "        return task.assigned_id == $data.user.user_id;",
+        "    });",
+        "}"
+      ],
+      "exposed" : false
+    },
+    "taskListUrl" : {
+      "type" : "expression",
+      "value" : [
+        "if ($data.user && $data.user.user_id) {",
+        "    return \"/bonita/API/extension/taskList?c=500&p=0&&userId=\" + $data.user.user_id;",
+        "}"
+      ],
+      "exposed" : false
+    }
+  },
+  "hasValidationError" : false,
+  "uuid" : "b622d47e-2334-4983-9e87-2b779352e259",
+  "type" : "page",
+  "description" : "Page generated with Bonita UI designer"
+}
